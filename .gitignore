@@ -1,4 +1,33 @@
-
+# Data files
+data/
+*.csv
 *.txt
-data/*.txt
-data/*.csv
+*.db
+*.parquet
+
+# DVC cache
+.dvc/cache/
+.dvc/tmp/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Models
+models/
+*.pkl
+*.joblib
+
+# Environment
+.env
+.DS_Store
