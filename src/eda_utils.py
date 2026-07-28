@@ -126,7 +126,8 @@ def loss_ratio_by_group(df: pd.DataFrame, group_col: str) -> pd.Series:
 
     result = df.groupby(group_col).apply(
         lambda x: x["TotalClaims"].sum() / x["TotalPremium"].sum()
-        if x["TotalPremium"].sum() != 0 else np.nan
+        if x["TotalPremium"].sum() != 0 else np.nan,
+        include_groups=False,
     ).round(4).sort_values(ascending=False)
     return result
 
